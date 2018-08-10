@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private byte[] resourceToByteArray() {
-        final Bitmap tntkhangBmp = BitmapFactory.decodeResource(getResources(), R.drawable.tntkhang);
+        final Bitmap tntkhangBmp = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher_background);
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         tntkhangBmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
         return stream.toByteArray();
