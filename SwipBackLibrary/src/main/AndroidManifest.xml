@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.tntkhang.swipbacklibrary" >
+
+    <application>
+
+        <activity
+            android:name=".FullTouchImageViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+    </application>
+</manifest>
