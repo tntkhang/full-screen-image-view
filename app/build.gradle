@@ -20,7 +20,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':FullScreenImageViewLibrary')
+    implementation project(':full-screen-image-view-library')
     implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
