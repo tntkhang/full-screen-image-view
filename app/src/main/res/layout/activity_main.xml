@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/iv_contain"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/tntkhang"/>
+        android:id="@+id/iv_contain1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/android1"/>
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_contain2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/android3"/>
+
+    <ImageView
+        android:id="@+id/iv_contain3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/android1"/>
+
+</LinearLayout>

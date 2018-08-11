@@ -1,1 +1,1 @@
-include ':app', ':SwipBackLibrary'
+include ':app', ':FullScreenImageViewLibrary'
