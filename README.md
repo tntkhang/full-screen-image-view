@@ -10,7 +10,7 @@ This is a library to help developer faster on view an image full screen which ha
 implementation 'com.github.tntkhang:full-screen-image-view-library:1.0.0'
 ```
 
-2. Call open a FullScreenImageViewActivity whenever need open it in full screen
+2. Call open a FullScreenImageViewActivity and sent some appropriate data.
 ```
 Intent fullImageIntent = new Intent(MainActivity.this, FullScreenImageViewActivity.class);
 // uriString is an ArrayList<String> of URI of all images
