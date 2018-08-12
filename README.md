@@ -1,5 +1,5 @@
 # full-screen-image-view-library
-This is an library to help developer faster on view an image full screen which has some guesture like: double tap to zoom, span, zoom in/out, move.
+This is a library to help developer faster on view an image full screen which has some gesture like double tap to zoom, span, zoom in/out, move.
 
 ![FullScreenImageViewGIF](FullScreenImageViewGIF.gif)
 
