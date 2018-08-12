@@ -30,11 +30,13 @@ public class ImageFragment extends Fragment {
             uri = Uri.parse(path);
         }
         View view = inflater.inflate(R.layout.full_image_item, container, false);
-        TouchImageView ivContent = view.findViewById(R.id.iv_content);
+//        TouchImageView ivContent = view.findViewById(R.id.iv_content);
 
-        Glide.with(this)
-                .load(uri)
-                .into(ivContent);
+        if (view instanceof TouchImageView) {
+            Glide.with(this)
+                    .load(uri)
+                    .into((TouchImageView)view);
+        }
 
         return view;
     }

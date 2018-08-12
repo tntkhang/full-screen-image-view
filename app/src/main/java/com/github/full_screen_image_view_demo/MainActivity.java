@@ -1,15 +1,23 @@
 package com.github.full_screen_image_view_demo;
 
+import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.github.tntkhang.fullscreenimageview.library.FullScreenImageViewActivity;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
                 onImageClickAction(uriString, 2);
             }
         });
+
+
+
+        requestPermissions();
+
+
+        ViewImagePicker viewImagePicker = findViewById(R.id.vew_image_picker);
+        List<Uri> imageItems = new ArrayList<>();
+        viewImagePicker.setAdapter(imageItems);
+        viewImagePicker.setCameraClickAction(getSupportFragmentManager());
     }
 
     private void onImageClickAction(ArrayList<String> uriString, int pos) {
@@ -56,5 +74,24 @@ public class MainActivity extends AppCompatActivity {
         fullImageIntent.putExtra(FullScreenImageViewActivity.IMAGE_FULL_SCREEN_CURRENT_POS, pos);
         startActivity(fullImageIntent);
 
+    }
+
+    private void requestPermissions() {
+        Dexter.withActivity(this)
+                .withPermissions(
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ).withListener(new MultiplePermissionsListener() {
+            @Override
+            public void onPermissionsChecked(MultiplePermissionsReport report) {
+            }
+
+            @Override
+            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                Toast.makeText(MainActivity.this, "Permission not granted !", Toast.LENGTH_SHORT).show();
+            }
+        })
+                .check();
     }
 }
