@@ -7,7 +7,7 @@ This is a library to help developer faster on view an image full screen which ha
 # Setup
 1. Add to build.gradle in app level
 ```
-implementation 'com.github.tntkhang:full-screen-image-view-library:1.0.0'
+implementation 'com.github.tntkhang:full-screen-image-view-library:1.1.0'
 ```
 
 2. Call open a FullScreenImageViewActivity and sent some appropriate data.
