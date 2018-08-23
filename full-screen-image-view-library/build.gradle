@@ -15,7 +15,7 @@ ext {
     gitUrl = 'https://github.com/tntkhang/full-screen-image-view-library.git' // Replace by your url
     githubRepository= 'tntkhang/full-screen-image-view-library' // Replace by your url
 
-    libraryVersion = '1.1.0' // Increase whenever you update library version
+    libraryVersion = '1.1.1' // Increase whenever you update library version
 
     developerId = 'tntkhang' // Replace by your name
     developerName = 'KhangTran' // Replace by your name
