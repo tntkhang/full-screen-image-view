@@ -3,7 +3,7 @@ This is a library to help developer faster on view an image full screen which ha
 
 ![FullScreenImageViewGIF](FullScreenImageViewGIF.gif)
 
-
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-full--screen--image--view-green.svg?style=flat )]( https://android-arsenal.com/details/1/7986 )
 # Setup
 1. Add to build.gradle in app level
 ```
